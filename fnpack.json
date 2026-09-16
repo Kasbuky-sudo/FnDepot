@@ -41,6 +41,18 @@
               "updated_at": "2026-09-16T15:00:00+08:00"
             }
           }
+        },
+        "1.0.1": {
+          "changelog": "新增 Server酱、Meow鸿蒙推送、自定义 Webhook 三个推送通道；Web UI 推送配置页同步支持；自定义 Webhook 支持 JSON / 表单两种提交方式与可选签名密钥。",
+          "updated_at": "2026-09-16T16:40:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/MiyoQian-v1.0.1/MiyoQian-1.0.1.fpk",
+              "sha256": "c2161c833a7e82c9ea713c4d4a9522f7f48b541fcb25eb7bdd814894f0c67d4a",
+              "size": 54165854,
+              "updated_at": "2026-09-16T16:40:00+08:00"
+            }
+          }
         }
       }
     }
