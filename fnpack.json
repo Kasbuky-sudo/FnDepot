@@ -35,7 +35,7 @@
           "updated_at": "2026-09-16T15:00:00+08:00",
           "packages": {
             "all": {
-              "download_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/MiyoQian/fpk/MiyoQian-1.0.0.fpk",
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/MiyoQian-v1.0.0/MiyoQian-1.0.0.fpk",
               "sha256": "37151f36015b00ca4148e26174dbea2fac557f22bb0c96d961c2b7b4b0a0093a",
               "size": 54164748,
               "updated_at": "2026-09-16T15:00:00+08:00"
