@@ -1,0 +1,48 @@
+{
+  "schema_version": "2",
+  "source_info": {
+    "name": "Kasbuky 的飞牛应用源",
+    "author": "Kasbuky-sudo",
+    "homepage": "https://github.com/Kasbuky-sudo/FnDepot",
+    "description": "自打包的飞牛 fnOS 第三方原生应用（非 Docker），兼容 x86 与 arm64。",
+    "i18n": {
+      "en-US": {
+        "name": "Kasbuky's fnOS App Depot",
+        "description": "Self-packaged native fnOS apps (non-Docker) for both x86 and arm64."
+      }
+    }
+  },
+  "apps": {
+    "MiyoQian": {
+      "display_name": "米游签",
+      "desc": "米游社每日签到工具。米游社 APP 扫码登录、游戏社区签到、云游戏签到（云原神/云绝区零）、米游币任务、商品兑换、每日自动执行与结果推送，带 Web 控制台。本包为飞牛 fnOS 原生打包版本（非 Docker），内置双架构离线 Python 运行环境，安装即用，数据保存在应用配置目录。",
+      "platform": ["all"],
+      "categories": ["系统工具"],
+      "icon_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/MiyoQian/icons/icon_256.png",
+      "readme_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/MiyoQian/README.md",
+      "bug_report_url": "https://github.com/Marchen-orz/MiyoQian/issues",
+      "maintainer": "Marchen-orz",
+      "maintainer_url": "https://github.com/Marchen-orz/MiyoQian",
+      "distributor": "Kasbuky-sudo",
+      "distributor_url": "https://github.com/Kasbuky-sudo",
+      "run_as": "package",
+      "install_type": "",
+      "is_docker": false,
+      "service_port": "8966",
+      "releases": {
+        "1.0.0": {
+          "changelog": "首个飞牛 fnOS 原生打包版本。基于上游 MiyoQian 源码，内置 uv + cp311 双架构离线 Python 依赖，安装时无需联网下载依赖；监听端口 8966。",
+          "updated_at": "2026-09-16T15:00:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/MiyoQian/fpk/MiyoQian-1.0.0.fpk",
+              "sha256": "37151f36015b00ca4148e26174dbea2fac557f22bb0c96d961c2b7b4b0a0093a",
+              "size": 54164748,
+              "updated_at": "2026-09-16T15:00:00+08:00"
+            }
+          }
+        }
+      }
+    }
+  }
+}

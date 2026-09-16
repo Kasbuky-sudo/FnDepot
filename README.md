@@ -1,0 +1,30 @@
+# FnDepot · 飞牛第三方应用源
+
+自打包的飞牛 fnOS **第三方原生应用源**（非 Docker），兼容 **x86 与 arm64**。
+
+遵循 [FnDepot 外部应用源 V2 规范](https://github.com/EWEDLCM/FnDepot)，仓库根目录的 `fnpack.json` 即源索引文件。
+
+## 添加本源
+
+在 FnDepot 客户端（≥ 0.0.7）的「外部源」中添加仓库地址：
+
+```
+https://github.com/Kasbuky-sudo/FnDepot
+```
+
+## 应用列表
+
+| 应用 | 版本 | 架构 | 端口 | 说明 |
+| --- | --- | --- | --- | --- |
+| [米游签 MiyoQian](https://github.com/Marchen-orz/MiyoQian) | 1.0.0 | all（x86 + arm64） | 8966 | 米游社每日签到工具：扫码登录、游戏社区签到、云游戏签到、米游币任务、商品兑换，带 Web 控制台 |
+
+## 打包说明
+
+- 非 Docker 原生应用：内置 uv 0.7.3（x86_64 / aarch64 musl 静态二进制）与 cp311 双架构离线 wheel，安装时按设备架构（`TRIM_SYS_ARCH`）自动选择，**无需联网下载依赖**。
+- 依赖系统 Python 3.11（飞牛 fnOS 基于 Debian 12，默认满足）。
+- 应用以专用包用户（`run-as: package`）运行；配置、凭证与日志保存在应用配置目录（`@appconf`），升级与重装不丢失。
+- 修改自上游项目 [Marchen-orz/MiyoQian](https://github.com/Marchen-orz/MiyoQian)，应用本体版权归原作者所有。
+
+## 免责声明
+
+本源仅供学习与个人使用。外部源不对外部应用代码、安装包安全性或运行稳定性做审核、担保或背书；使用自动签到工具存在账号风控风险，请低频、保守使用，风险自担。
