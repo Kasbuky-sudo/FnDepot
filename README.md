@@ -16,8 +16,8 @@ https://github.com/Kasbuky-sudo/FnDepot
 
 | 应用 | 版本 | 架构 | 端口 | 说明 |
 | --- | --- | --- | --- | --- |
-| [旅行青蛙 · NAS 版](https://github.com/Kasbuky-sudo/frog-nas) | 1.0.0 | all（x86 + arm64） | 8980 | 《旅行青蛙·中国之旅》离线包的 NAS 移植：服务端权威引擎、外部推送（Webhook / 鸿蒙 MeoW）、AI Agent 接口；桌面页内打开，进度保存在应用目录，卸载重装不丢 |
-| [米游签 MiyoQian](https://github.com/Marchen-orz/MiyoQian) | 1.0.0 | all（x86 + arm64） | 8966 | 米游社每日签到工具：扫码登录、游戏社区签到、云游戏签到、米游币任务、商品兑换，带 Web 控制台 |
+| [旅行青蛙 · NAS 版](https://github.com/Kasbuky-sudo/frog-nas) | 1.0.1 | all（x86 + arm64） | 8980 | 《旅行青蛙·中国之旅》离线包的 NAS 移植：服务端权威引擎、外部推送（Webhook / 鸿蒙 MeoW）、AI Agent 接口；桌面页内打开，进度保存在应用目录，卸载重装不丢 |
+| [米游签 MiyoQian](https://github.com/Marchen-orz/MiyoQian) | 1.0.1 | all（x86 + arm64） | 8966 | 米游社每日签到工具：扫码登录、游戏社区签到、云游戏签到、米游币任务、商品兑换，带 Web 控制台 |
 
 ## 打包说明
 
