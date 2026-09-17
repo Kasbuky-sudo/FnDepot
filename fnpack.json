@@ -16,8 +16,12 @@
     "MiyoQian": {
       "display_name": "米游签",
       "desc": "米游社每日签到工具。米游社 APP 扫码登录、游戏社区签到、云游戏签到（云原神/云绝区零）、米游币任务、商品兑换、每日自动执行与结果推送，带 Web 控制台。本包为飞牛 fnOS 原生打包版本（非 Docker），内置双架构离线 Python 运行环境，安装即用，数据保存在应用配置目录。",
-      "platform": ["all"],
-      "categories": ["系统工具"],
+      "platform": [
+        "all"
+      ],
+      "categories": [
+        "系统工具"
+      ],
       "icon_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/MiyoQian/icons/icon_256.png",
       "readme_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/MiyoQian/README.md",
       "bug_report_url": "https://github.com/Marchen-orz/MiyoQian/issues",
@@ -51,6 +55,39 @@
               "sha256": "c2161c833a7e82c9ea713c4d4a9522f7f48b541fcb25eb7bdd814894f0c67d4a",
               "size": 54165854,
               "updated_at": "2026-09-16T16:40:00+08:00"
+            }
+          }
+        }
+      }
+    },
+    "frog-nas": {
+      "display_name": "旅行青蛙 · NAS 版",
+      "desc": "把《旅行青蛙·中国之旅》的离线包移植成跑在 NAS 上的网页应用：引擎在服务端跑一份，浏览器只是它的一个视图，关掉浏览器蛙也照常出门、回家、收邮件。在原版之外接出外部推送（自定义 Webhook / 鸿蒙 MeoW，免打扰时段事件排队补发、不丢）与 AI Agent 接口（REST + OpenAPI + 5 个自包含 SKILL.md，agent 知道地址就能来玩）。游戏逻辑一行未改；游戏代码与美术素材不随源码仓库分发。飞牛原生打包版（非 Docker），一个包同时支持 x86_64 与 arm64，进度保存在应用目录，卸载重装不丢。",
+      "platform": [
+        "all"
+      ],
+      "categories": [
+        "游戏地带"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/frog-nas/icons/icon_256.png",
+      "readme_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/frog-nas/README.md",
+      "bug_report_url": "https://github.com/Kasbuky-sudo/frog-nas/issues",
+      "maintainer": "Kasbuky",
+      "maintainer_url": "https://github.com/Kasbuky-sudo",
+      "run_as": "package",
+      "install_type": "",
+      "is_docker": false,
+      "service_port": "8980",
+      "releases": {
+        "1.0.0": {
+          "changelog": "首个飞牛 fnOS 原生打包版本。服务端权威引擎（关掉浏览器也继续运行）＋ 外部推送（自定义 Webhook / 鸿蒙 MeoW，免打扰期间排队补发）＋ AI Agent 接口（REST / OpenAPI / 5 个 SKILL.md）；桌面入口为页内 iframe；一个包双架构（x86_64 + arm64）；监听端口 8980。",
+          "updated_at": "2026-09-17T22:42:01+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/frog-nas-v1.0.0/frog-nas-1.0.0.fpk",
+              "sha256": "61d034c9e976ff07cf8a5d40e992deb75e6b46c5bdf7e0bb7cab23a2b89a425f",
+              "size": 248202240,
+              "updated_at": "2026-09-17T22:42:01+08:00"
             }
           }
         }
