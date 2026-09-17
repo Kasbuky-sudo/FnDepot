@@ -84,17 +84,3 @@ curl -s http://<NAS_IP>:8980/api/skills       # 技能清单
 
 运行时依赖只有 `express` 与 `ws`，两个都是纯 JavaScript，运行时由应用中心的
 `nodejs_v22` 提供。x86NAS 与 armNAS 均已完成真机安装验收。
-
-## 源码与许可
-
-源码：https://github.com/Kasbuky-sudo/frog-nas
-（**仓库里不含任何游戏代码、美术、音频资源**，用自己的解包目录跑
-`scripts/fetch-source.*` 准备；本 `.fpk` 是完整可运行产物，因此内含游戏运行时资源。）
-
-- 《旅行青蛙》著作权归 **Hit-Point Co., Ltd.** 所有。
-- 离线版由 **Balticx** 制作，游戏页面内的权利归属声明原样保留。
-- **NAS / Docker 移植版由 Kasbuky 制作**。
-- 本项目为非商业性的游戏保存与研究项目：不出售、不出租、不接受捐赠、
-  不附带广告或任何形式的变相收费。
-
-游戏源文件不纳入版本控制；游戏页面内的权利归属声明弹层每次启动都会显示，请勿移除。
