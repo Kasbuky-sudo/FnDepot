@@ -103,6 +103,18 @@
               "updated_at": "2026-09-18T00:13:18+08:00"
             }
           }
+        },
+        "1.0.2": {
+          "changelog": "修「加载到一半停住、NAS 不再传数据」：服务端 keep-alive 由 Node 默认的 5 秒放宽到 65 秒（加载器 4 路并发、组间空档常超 5 秒，复用被服务端关闭的连接就会假死）；客户端为所有 XHR 补上 120 秒默认超时（引擎原本设为 0＝永不超时，假死时会一直等下去），超时后能触发引擎自带的 3 次重试；另新增可疑请求日志（响应被掐断／4xx·5xx／耗时过长），GET /api/logs/access 可读。",
+          "updated_at": "2026-09-18T02:22:32+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/frog-nas-v1.0.2/frog-nas-1.0.2.fpk",
+              "sha256": "9a1c638216e6bd3ff0c9f0ca500128d800210a525c8d52b9e856b3e20fababf4",
+              "size": 248212094,
+              "updated_at": "2026-09-18T02:22:32+08:00"
+            }
+          }
         }
       }
     }
