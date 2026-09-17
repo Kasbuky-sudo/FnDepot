@@ -86,9 +86,9 @@
           "packages": {
             "all": {
               "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/frog-nas-v1.0.0/frog-nas-1.0.0.fpk",
-              "sha256": "61d034c9e976ff07cf8a5d40e992deb75e6b46c5bdf7e0bb7cab23a2b89a425f",
-              "size": 248202240,
-              "updated_at": "2026-09-17T22:42:01+08:00"
+              "sha256": "324806337dca4164403230d47e8af25c7c7e0ef52b652db59761f926b88792db",
+              "size": 248202257,
+              "updated_at": "2026-09-17T23:18:46+08:00"
             }
           }
         }
