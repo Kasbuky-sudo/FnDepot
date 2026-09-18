@@ -47,7 +47,7 @@
           }
         },
         "1.0.1": {
-          "changelog": "新增 Server酱、Meow鸿蒙推送、自定义 Webhook 三个推送通道；Web UI 推送配置页同步支持；自定义 Webhook 支持 JSON / 表单两种提交方式与可选签名密钥。",
+          "changelog": "新增 Server酱、Meow鸿蒙推送、自定义 Webhook 三个推送通道；Web UI 推送配置页同步支持；自定义 Webhook 支持 JSON / 表单两种提交方式与可选签名密钥。⚠ 本版本 x86 包存在架构判断缺陷，x86 设备安装会失败，请升级 1.0.2；arm 设备不受影响。",
           "updated_at": "2026-09-16T16:40:00+08:00",
           "packages": {
             "all": {
@@ -55,6 +55,18 @@
               "sha256": "c2161c833a7e82c9ea713c4d4a9522f7f48b541fcb25eb7bdd814894f0c67d4a",
               "size": 54165854,
               "updated_at": "2026-09-16T16:40:00+08:00"
+            }
+          }
+        },
+        "1.0.2": {
+          "changelog": "修复 x86 架构设备安装失败（错误码 10238）：安装回调的架构判断值（x86_64）与 fnOS 注入的系统架构标识（x86）不一致，导致 x86 设备安装中止。arm 设备不受影响。",
+          "updated_at": "2026-09-18T16:40:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/MiyoQian-v1.0.2/MiyoQian-1.0.2.fpk",
+              "sha256": "ad76ae82723868f14c9f3d637b29e56afc754e559c4c6795eb4a46b7d6aa611f",
+              "size": 54165981,
+              "updated_at": "2026-09-18T16:40:00+08:00"
             }
           }
         }
