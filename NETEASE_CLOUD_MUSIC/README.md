@@ -4,7 +4,8 @@
 服务端解析官方乐库接口，浏览器 / fnOS 桌面里直接用完整播放器 ——
 歌单、每日推荐、排行榜、歌词、手机扫码登录、在线播放、**歌曲下载到 NAS**。
 
-- 上游项目 [open-orpheus](https://github.com/YUCLing/open-orpheus)（MIT，YUCLing），本包为其 NAS 侧移植与 fnOS 打包
+- **开发者**：[YUCLing](https://github.com/YUCLing)（上游 [open-orpheus](https://github.com/YUCLing/open-orpheus)，MIT）
+- **NAS 移植 / 打包 / 发布**：[Kasbuky-sudo](https://github.com/Kasbuky-sudo)
 - 原生 Node.js 运行，复用应用中心 **Node.js v22**（`nodejs_v22`，安装时自动作为前置依赖装上），包内原生模块数量为 0，一个包通吃 x86_64 / arm64
 - 端口 **8163**，桌面图标页内（iframe）打开
 - 多浏览器会话隔离：每个会话独立登录态 / 曲库 / 缓存
