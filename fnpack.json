@@ -186,6 +186,18 @@
               "updated_at": "2026-09-18T16:09:24+08:00"
             }
           }
+        },
+        "0.4.0": {
+          "changelog": "0.4.0：弱网优化——静态资源 gzip 压缩（主界面/登录页 chunk 约 5MB→1.3MB，体积约降至 1/4）与缓存校验（ETag/304，二次打开不再全量重下），新增首屏加载画面；飞牛 Connect 等远程弱网环境不再白屏、登录页打不开。0.3.0：新增 Agent API（NAS 侧找歌/下载，供自动化调用，token 见 data/agent-token）；登录态集中存 NAS（shared 罐，全设备共用一份，接口/下载/Agent 处处可用），并修复登录 cookie 被新设备打开时误删的问题；修复长响应超时导致的应用偶发崩溃退出。0.2.0：修复登录弹窗卡死与点歌不播放；新增歌曲下载（落 /vol1/1000/网易云音乐）；图标更正为官方红底白图。0.1.0：首个版本，原生 Node.js 运行，页内打开，端口 8163。",
+          "updated_at": "2026-09-18T22:27:25+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/NETEASE_CLOUD_MUSIC-v0.4.0/NETEASE_CLOUD_MUSIC-0.4.0.fpk",
+              "sha256": "f6101737923336a0b042724598f9707c126c5ddaba672c7f42128d1eed62179b",
+              "size": 38833443,
+              "updated_at": "2026-09-18T22:27:25+08:00"
+            }
+          }
         }
       },
       "developer": "YUCLing",
