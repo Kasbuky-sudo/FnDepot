@@ -215,7 +215,7 @@
       "icon_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/CompareShare/icons/icon_256.png",
       "readme_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/CompareShare/README.md",
       "bug_report_url": "https://github.com/Kasbuky-sudo/CompareShare/issues",
-      "maintainer": "LocalSend",
+      "maintainer": "LocalSend & Kasbuky",
       "maintainer_url": "https://github.com/localsend/localsend",
       "distributor": "Kasbuky",
       "distributor_url": "https://github.com/Kasbuky-sudo",
@@ -233,6 +233,18 @@
               "sha256": "3bf974cdfa455cf7558158a73aa1563f2f55722ca04fee154eb7358f06db578e",
               "size": 114862,
               "updated_at": "2026-09-19T03:45:00+08:00"
+            }
+          }
+        },
+        "1.1.2": {
+          "changelog": "修正应用开发者与发布者署名。功能同 1.1.1：目录授权面板新增分步引导，系统版本较旧时给出「应用中心 → 已安装 → 应用设置 → 访问权限」的操作路径。",
+          "updated_at": "2026-09-19T04:05:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/CompareShare-v1.1.2/CompareShare.fpk",
+              "sha256": "4e002ebee18e3dafdc64980ad82c3bee7e5a636e309e6dc43890df40f30d3339",
+              "size": 114833,
+              "updated_at": "2026-09-19T04:05:00+08:00"
             }
           }
         }
