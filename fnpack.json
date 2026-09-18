@@ -247,6 +247,18 @@
               "updated_at": "2026-09-19T04:05:00+08:00"
             }
           }
+        },
+        "1.1.6": {
+          "changelog": "优化旧版系统下的授权面板：不再重复显示「打开系统应用设置」按钮，系统不支持授权时按钮置灰并说明原因；修复授权状态接口 500 与收件目录校验。",
+          "updated_at": "2026-09-19T05:20:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/CompareShare-v1.1.6/CompareShare.fpk",
+              "sha256": "aa38dc42747759ef9ec0ff3199a348cc76f4bfaf94f88244113899b82ffd86b6",
+              "size": 117379,
+              "updated_at": "2026-09-19T05:20:00+08:00"
+            }
+          }
         }
       }
     }
