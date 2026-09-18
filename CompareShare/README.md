@@ -5,8 +5,8 @@
 手机、电脑、平板装个 LocalSend 就能和 NAS 直接互传文件，**不经过云端、不需要账号、不依赖外网**。
 飞牛原生打包（非 Docker），纯 Python 标准库实现，**一个包同时支持 x86_64 与 arm64**。
 
-- **开发者**：[LocalSend](https://github.com/localsend/localsend)（协议与官方实现，Apache-2.0）
-- **NAS 移植 / 打包 / 发布**：[Kasbuky-sudo](https://github.com/Kasbuky-sudo)
+- **开发者**：[LocalSend](https://github.com/localsend/localsend) 与 [Kasbuky](https://github.com/Kasbuky-sudo)
+- **发布者**：[Kasbuky](https://github.com/Kasbuky-sudo)
 - 端口 **11011**（Web 管理界面）与 **53317**（LocalSend 协议，HTTPS），桌面图标页内（iframe）打开
 
 ## 功能
