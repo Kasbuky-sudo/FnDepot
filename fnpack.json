@@ -202,6 +202,41 @@
       },
       "developer": "YUCLing",
       "developer_url": "https://github.com/YUCLing/open-orpheus"
+    },
+    "CompareShare": {
+      "display_name": "Compare Share",
+      "desc": "飞牛 fnOS 上的局域网极速互传应用，基于 LocalSend v2.2 协议。手机、电脑、平板装个 LocalSend 就能和 NAS 直接互传文件，不经过云端、不需要账号、不依赖外网。发现采用多播广播 + 网段扫描双通道，家用路由器过滤无线到有线的多播时仍能找到设备；支持双向收发、飞牛官方目录授权（授权由系统完成，应用只回读结果）、HTTPS + 自签证书指纹固定、可选 PIN 码校验。纯 Python 标准库实现，非 Docker，一个包同时支持 x86_64 与 arm64，配置与证书保存在应用配置目录，卸载重装不丢。",
+      "platform": [
+        "all"
+      ],
+      "categories": [
+        "系统工具"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/CompareShare/icons/icon_256.png",
+      "readme_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/CompareShare/README.md",
+      "bug_report_url": "https://github.com/Kasbuky-sudo/CompareShare/issues",
+      "maintainer": "LocalSend",
+      "maintainer_url": "https://github.com/localsend/localsend",
+      "distributor": "Kasbuky",
+      "distributor_url": "https://github.com/Kasbuky-sudo",
+      "run_as": "package",
+      "install_type": "",
+      "is_docker": false,
+      "service_port": "11011",
+      "releases": {
+        "1.1.1": {
+          "changelog": "首个 FnDepot 发布版本。基于 LocalSend v2.2 协议：多播发现、双向收发、会话管理、PIN 校验、SHA-256 校验；飞牛原生 fpk 打包，纯 Python 标准库实现，单包支持 x86 与 arm64；目录授权走飞牛官方 SDK；Web 管理界面含设备列表、收件箱、传输记录与设置；HTTPS + 自签证书指纹固定。已在 x86 与 arm64 两台飞牛设备实测通过。",
+          "updated_at": "2026-09-19T03:45:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/CompareShare-v1.1.1/CompareShare.fpk",
+              "sha256": "3bf974cdfa455cf7558158a73aa1563f2f55722ca04fee154eb7358f06db578e",
+              "size": 114862,
+              "updated_at": "2026-09-19T03:45:00+08:00"
+            }
+          }
+        }
+      }
     }
   }
 }
