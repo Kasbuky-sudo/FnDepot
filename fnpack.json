@@ -154,8 +154,8 @@
       "icon_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/NETEASE_CLOUD_MUSIC/icons/icon_256.png",
       "readme_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/NETEASE_CLOUD_MUSIC/README.md",
       "bug_report_url": "https://github.com/Kasbuky-sudo/NAS-NEM/issues",
-      "maintainer": "YUCLing",
-      "maintainer_url": "https://github.com/YUCLing/open-orpheus",
+      "maintainer": "Kasbuky-sudo",
+      "maintainer_url": "https://github.com/Kasbuky-sudo/NAS-NEM",
       "distributor": "Kasbuky",
       "distributor_url": "https://github.com/Kasbuky-sudo",
       "run_as": "package",
@@ -175,7 +175,9 @@
             }
           }
         }
-      }
+      },
+      "developer": "YUCLing",
+      "developer_url": "https://github.com/YUCLing/open-orpheus"
     }
   }
 }
