@@ -19,6 +19,7 @@ https://github.com/Kasbuky-sudo/FnDepot
 | [旅行青蛙 · NAS 版](https://github.com/Kasbuky-sudo/frog-nas) | 1.0.3 | all（x86 + arm64） | 8980 | 《旅行青蛙·中国之旅》离线包的 NAS 移植：服务端权威引擎、外部推送（Webhook / 鸿蒙 MeoW）、AI Agent 接口；桌面页内打开，进度保存在应用目录，卸载重装不丢 |
 | [网易云音乐 · NAS 版](https://github.com/Kasbuky-sudo/NAS-NEM) | 0.2.0 | all（x86 + arm64） | 8163 | 官方 PC 客户端的 NAS 移植：完整播放器（推荐 / 歌单 / 排行榜 / 歌词 / 搜索）、手机扫码登录、在线播放、歌曲下载到 NAS；依赖应用中心 nodejs_v22，页内打开 |
 | [米游签 MiyoQian](https://github.com/Marchen-orz/MiyoQian) | 1.0.1 | all（x86 + arm64） | 8966 | 米游社每日签到工具：扫码登录、游戏社区签到、云游戏签到、米游币任务、商品兑换，带 Web 控制台 |
+| [Compare Share](https://github.com/Kasbuky-sudo/CompareShare) | 1.1.1 | all（x86 + arm64） | 11011 / 53317 | 局域网极速互传，基于 LocalSend v2.2 协议：与手机、电脑、平板直接互传文件，无需云端与账号；多播 + 网段扫描双通道发现，纯 Python 实现，一个包通吃双架构 |
 
 ## 打包说明
 
