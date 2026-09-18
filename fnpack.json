@@ -259,6 +259,18 @@
               "updated_at": "2026-09-19T05:20:00+08:00"
             }
           }
+        },
+        "1.1.7": {
+          "changelog": "目录授权明确要求飞牛系统 1.2.0604 及以上。低于该版本的系统不会把目录授权下发给第三方应用，即使已在系统设置中授权也不生效；应用按版本号判断并明确提示。同时完善收件目录校验与授权面板提示。",
+          "updated_at": "2026-09-19T05:40:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/CompareShare-v1.1.7/CompareShare.fpk",
+              "sha256": "ac00e549518be7951f45e7ae1c08b37eeee10e50f0ae83ff66943752b683a399",
+              "size": 117499,
+              "updated_at": "2026-09-19T05:40:00+08:00"
+            }
+          }
         }
       }
     }
