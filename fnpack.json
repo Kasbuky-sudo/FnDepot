@@ -198,6 +198,18 @@
               "updated_at": "2026-09-18T22:27:25+08:00"
             }
           }
+        },
+        "0.4.1": {
+          "changelog": "0.4.1：修复应用安装到非默认存储空间（非 /vol1 卷）时找不到 Node.js 运行时、无法启用的问题——运行时查找改为跨卷解析（/var/apps 统一视图 + 全卷扫描）。",
+          "updated_at": "2026-09-19T14:11:45+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/NETEASE_CLOUD_MUSIC-v0.4.1/NETEASE_CLOUD_MUSIC-0.4.1.fpk",
+              "sha256": "c4a981ef4c69a79384f1b3897726318a5baa036a391c28a5695944278bc08d05",
+              "size": 38834688,
+              "updated_at": "2026-09-19T14:11:45+08:00"
+            }
+          }
         }
       },
       "developer": "YUCLing",
