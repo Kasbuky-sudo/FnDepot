@@ -25,7 +25,7 @@ https://github.com/Kasbuky-sudo/FnDepot
 
 - 非 Docker 原生应用：内置 uv 0.7.3（x86_64 / aarch64 musl 静态二进制）与 cp311 双架构离线 wheel，安装时按设备架构（`TRIM_SYS_ARCH`）自动选择，**无需联网下载依赖**。
 - **旅行青蛙 · NAS 版**依赖应用中心商店的 Node.js v22（`nodejs_v22`），安装时会作为前置依赖一并装上（manifest 里声明了 `install_dep_apps`）；应用本体只含纯 JavaScript 与游戏运行时资源，包内原生模块数量为 0。它的 `.fpk` 有 237MB，**超过 GitHub 单文件 100MB 上限**，因此和米游签一样走 Release 资产分发，不进版本库。
-- **网易云音乐 · NAS 版**同样依赖应用中心商店的 Node.js v22（`nodejs_v22`，manifest 里声明了 `install_dep_apps`）；应用本体只含纯 JavaScript，包内原生模块数量为 0，一个包 37MB。它的 `.fpk` 同样走 Release 资产分发，不进版本库（tag: `NETEASE_CLOUD_MUSIC-v0.4.0`）。
+- **网易云音乐 · NAS 版**同样依赖应用中心商店的 Node.js v22（`nodejs_v22`，manifest 里声明了 `install_dep_apps`）；应用本体只含纯 JavaScript，包内原生模块数量为 0，一个包 37MB。它的 `.fpk` 同样走 Release 资产分发，不进版本库（tag: `NETEASE_CLOUD_MUSIC-v0.4.1`）。
 - **Compare Share** 的目录授权功能需要飞牛系统 **1.2.0604 及以上**：低版本系统不会把目录授权下发给第三方应用，实测 1.2.0302 不支持。不授权的功能不受影响，仍可使用默认收件目录。
 - **Compare Share** 是纯 Python 标准库实现，不依赖任何第三方包与预编译二进制，因此一个包直接通吃 x86_64 / arm64；依赖系统 Python 3（飞牛 fnOS 基于 Debian 12，默认满足）。它同时监听 53317（LocalSend 协议，HTTPS）与 11011（Web 界面），包体仅约 112 KB，配置与证书存放在应用配置目录，重装后设备指纹保持不变。
 - 米游签依赖系统 Python 3.11（飞牛 fnOS 基于 Debian 12，默认满足）。
