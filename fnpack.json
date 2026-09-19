@@ -307,6 +307,18 @@
               "updated_at": "2026-09-19T14:25:13+08:00"
             }
           }
+        },
+        "1.2.2": {
+          "changelog": "修复保存下载目录的入口不明显：保存按钮原先在设置页最底部，改完路径容易漏点保存，导致文件仍落在旧目录。现在下载目录输入框旁有独立保存按钮，离开输入框或按回车即自动保存，点击已授权目录也会直接保存生效。",
+          "updated_at": "2026-09-19T14:35:24+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/CompareShare-v1.2.2/CompareShare.fpk",
+              "sha256": "4b12cf879aa4f7c6f6296f7bd2439ec51e3ce6d318a5723083e011e8fb0de6f1",
+              "size": 132384,
+              "updated_at": "2026-09-19T14:35:24+08:00"
+            }
+          }
         }
       }
     }
