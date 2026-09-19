@@ -16,7 +16,7 @@ https://github.com/Kasbuky-sudo/FnDepot
 
 | 应用 | 版本 | 架构 | 端口 | 说明 |
 | --- | --- | --- | --- | --- |
-| [旅行青蛙 · NAS 版](https://github.com/Kasbuky-sudo/frog-nas) | 1.0.3 | all（x86 + arm64） | 8980 | 《旅行青蛙·中国之旅》离线包的 NAS 移植：服务端权威引擎、外部推送（Webhook / 鸿蒙 MeoW）、AI Agent 接口；桌面页内打开，进度保存在应用目录，卸载重装不丢 |
+| [旅行青蛙 · NAS 版](https://github.com/Kasbuky-sudo/frog-nas) | 1.0.4 | all（x86 + arm64） | 8980 | 《旅行青蛙·中国之旅》离线包的 NAS 移植：服务端权威引擎、外部推送（Webhook / 鸿蒙 MeoW）、AI Agent 接口；桌面页内打开，进度保存在应用目录，卸载重装不丢 |
 | [网易云音乐 · NAS 版](https://github.com/Kasbuky-sudo/NAS-NEM) | 0.4.1 | all（x86 + arm64） | 8163 | 官方 PC 客户端的 NAS 移植：完整播放器（推荐 / 歌单 / 排行榜 / 歌词 / 搜索）、手机扫码登录、在线播放、歌曲下载到 NAS、登录态跨设备共享、AI 找歌下载（Agent API）；依赖应用中心 nodejs_v22，页内打开 |
 | [Telegram](https://github.com/Kasbuky-sudo/fnos-telegram) | 1.1.0 | all（x86 + arm64） | 8970 | Telegram Web 客户端（tweb / Telegram Web K 前端）的 fnOS 原生打包：HTTPS 自签证书托管，零 pip 依赖；内置 NAS 出口转发（MTProto 中继），局域网设备无需各自配置代理。首次打开需信任一次自签证书 |
 | [米游签 MiyoQian](https://github.com/Marchen-orz/MiyoQian) | 1.0.1 | all（x86 + arm64） | 8966 | 米游社每日签到工具：扫码登录、游戏社区签到、云游戏签到、米游币任务、商品兑换，带 Web 控制台 |
