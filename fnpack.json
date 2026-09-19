@@ -321,6 +321,41 @@
           }
         }
       }
+    },
+    "Telegram": {
+      "display_name": "Telegram",
+      "desc": "Telegram Web 客户端（基于开源 tweb / Telegram Web K，官方 web.telegram.org/k 同款前端）的飞牛 fnOS 原生打包版本（非 Docker）。HTTPS 自签证书托管，零 pip 依赖，单包支持 x86 与 arm64；内置 NAS 出口转发（MTProto WebSocket + HTTPS 双通道，域名白名单限制），局域网设备访问本应用时无需各自配置代理。NAS 只托管静态页面并转发加密字节，不存储聊天数据，会话保存在浏览器本地。",
+      "platform": [
+        "all"
+      ],
+      "categories": [
+        "通讯"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/Telegram/icons/icon_256.png",
+      "readme_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/Telegram/README.md",
+      "bug_report_url": "https://github.com/Kasbuky-sudo/fnos-telegram/issues",
+      "maintainer": "Telegram",
+      "maintainer_url": "https://github.com/morethanwords/tweb",
+      "distributor": "Kasbuky",
+      "distributor_url": "https://github.com/Kasbuky-sudo",
+      "run_as": "package",
+      "install_type": "",
+      "is_docker": false,
+      "service_port": "8970",
+      "releases": {
+        "1.1.0": {
+          "changelog": "首个 FnDepot 发布版本。基于 tweb master（v2.2 build 676）：HTTPS 自签证书托管（openssl / cryptography 兜底生成，证书随应用配置目录保存）；自动跳过 ServiceWorker（自签证书下其校验必失败）并附 HTTP 访问警告条；内置 NAS 出口转发（/proxy-ws 与 /proxy-https 双通道，白名单 .web.telegram.org/.telegram.org/.cdn.telegram.org/.telesco.pe），局域网设备经 NAS 中继访问 Telegram，无需各自配置代理。首次打开需信任自签证书一次。",
+          "updated_at": "2026-09-19T14:40:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/fnos-telegram/releases/download/v1.1.0/Telegram-1.1.0.fpk",
+              "sha256": "bbcf64deeda3c475c0cf294d9d6c1af6b7a9c3d0309c7c96f68ade0952efd5c1",
+              "size": 45567381,
+              "updated_at": "2026-09-19T14:40:00+08:00"
+            }
+          }
+        }
+      }
     }
   }
 }
