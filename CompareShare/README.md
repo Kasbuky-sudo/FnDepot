@@ -74,10 +74,4 @@ https://github.com/Kasbuky-sudo/FnDepot
 ## 许可
 
 本项目基于 [Apache-2.0](LICENSE) 发布。
-
-LocalSend 协议由 [localsend/protocol](https://github.com/localsend/protocol) 定义，参照实现 [localsend/localsend](https://github.com/localsend/localsend) 亦为 Apache-2.0。
-
-- **开发者**：[LocalSend](https://github.com/localsend/localsend) 与 [Kasbuky](https://github.com/Kasbuky-sudo)
-- **发布者**：[Kasbuky](https://github.com/Kasbuky-sudo)
-
 本应用为独立实现，与 LocalSend 官方无隶属关系。
