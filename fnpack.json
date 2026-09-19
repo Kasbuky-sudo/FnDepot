@@ -331,6 +331,18 @@
               "updated_at": "2026-09-19T14:35:24+08:00"
             }
           }
+        },
+        "1.2.3": {
+          "changelog": "日志按大小自动轮转，避免长期运行后日志持续膨胀占用空间；忽略素材文件不进版本库。",
+          "updated_at": "2026-09-19T20:56:52+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/CompareShare-v1.2.3/CompareShare.fpk",
+              "sha256": "10039c73f0badce98988687f6a3bf06bda0b4b5b45e9382dc5e30dd0fd34ef30",
+              "size": 132688,
+              "updated_at": "2026-09-19T20:56:52+08:00"
+            }
+          }
         }
       }
     },
