@@ -343,6 +343,18 @@
               "updated_at": "2026-09-19T20:56:52+08:00"
             }
           }
+        },
+        "1.2.4": {
+          "changelog": "修复手机发送文件报 [422] Checksum mismatch 的问题：官方客户端流式上传时使用 HTTP chunked 传输编码，此前未解码分块格式，导致分块长度标记被当作文件内容写入（字节数看似正确但内容已损坏，只有校验和能发现）。现已正确解码。同时为上传连接增加读取超时，避免异常客户端导致连接挂死。",
+          "updated_at": "2026-09-20T00:37:32+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/CompareShare-v1.2.4/CompareShare.fpk",
+              "sha256": "7331a35e48d8a947be36d8d011080896b83c8f31c405c258e0385d2be087a046",
+              "size": 134491,
+              "updated_at": "2026-09-20T00:37:32+08:00"
+            }
+          }
         }
       }
     },
