@@ -295,6 +295,18 @@
               "updated_at": "2026-09-19T14:10:00+08:00"
             }
           }
+        },
+        "1.2.1": {
+          "changelog": "修复卸载重装后用户设置被重置的问题：下载目录、设备名、PIN 等配置此前在重装后会丢失并回退到默认收件目录。现在配置会同步备份到应用共享目录，重装时自动恢复。",
+          "updated_at": "2026-09-19T14:25:13+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/CompareShare-v1.2.1/CompareShare.fpk",
+              "sha256": "fa32007f2ce64c733dd0191b9d80424663af06cf246cd38f5a956783d7ebef95",
+              "size": 131489,
+              "updated_at": "2026-09-19T14:25:13+08:00"
+            }
+          }
         }
       }
     }
