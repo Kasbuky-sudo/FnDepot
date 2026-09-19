@@ -271,6 +271,18 @@
               "updated_at": "2026-09-19T05:40:00+08:00"
             }
           }
+        },
+        "1.2.0": {
+          "changelog": "新增浏览器上传页：手机不装应用，浏览器打开 http://<NAS>:11011/upload 即可传文件，设置页提供二维码扫码直达；上传复用 LocalSend 端点，PIN 校验与安全保护一并生效，可关闭。修复本机地址探测在 VPN 环境下取错网段。",
+          "updated_at": "2026-09-19T14:10:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/CompareShare-v1.2.0/CompareShare.fpk",
+              "sha256": "f4fe23e339466665a4abfff991f0f5d0a3f3bd640ad1e7c06d76a93763c7b73c",
+              "size": 130917,
+              "updated_at": "2026-09-19T14:10:00+08:00"
+            }
+          }
         }
       }
     }
