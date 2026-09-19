@@ -71,54 +71,6 @@ https://github.com/Kasbuky-sudo/FnDepot
 保存时会校验目录是否存在、是否可写，不可用会当场提示原因，不会等到收文件时才失败；
 已授权的目录在面板中可直接点击填入。
 
-## 从源码构建
-
-需要 [fnpack](https://developer.fnnas.com/)（飞牛官方打包工具）。
-
-```bash
-fnpack build -d CompareShare
-```
-
-产物为 `CompareShare.fpk`。应用本身是纯 Python 3 实现，只依赖标准库，无需编译，这也是它能同时支持 x86 与 arm64 的原因。
-
-### 目录结构
-
-```
-CompareShare/
-├── manifest                 # 应用元数据
-├── config/
-│   ├── privilege            # 运行身份（专用包用户）
-│   └── resource             # 共享目录与开放接口权限声明
-├── cmd/                     # 生命周期脚本（安装/启动/停止/升级/卸载）
-├── app/
-│   ├── ui/                  # 飞牛桌面入口配置与图标
-│   └── server/
-│       ├── main.py          # 入口
-│       └── compareshare/
-│           ├── protocol.py      # LocalSend v2.2 数据模型与文件名清洗
-│           ├── discovery.py     # 多播发现（逐网卡绑定）
-│           ├── receiver.py      # 接收端（流式落盘 + 校验）
-│           ├── sender.py        # 发送端（证书指纹固定）
-│           ├── fnos.py          # 飞牛开放接口客户端（Unix socket）
-│           ├── tls.py           # 自签证书与指纹
-│           ├── core.py          # 状态聚合与网段扫描
-│           ├── http_server.py   # 协议端点 + Web API + 静态资源
-│           └── webui/           # 前端（原生 HTML/CSS/JS，内置飞牛 SDK）
-└── wizard/                  # 安装向导（当前为空）
-```
-
-## 实现要点
-
-几个容易踩坑、文档里不显眼但必须处理的地方：
-
-- **多网卡多播**：每个物理网卡单独建 socket 并绑定出口（`IP_MULTICAST_IF`）。默认路由未必是业务网卡（本机实测默认路由走 Meta tun 口），不显式绑定会广播到错误方向。容器/虚拟接口需要排除。
-- **发现要双向**：按协议，收到广播后必须回一个 HTTP `register`，否则对方学不到你的存在——只记录不回复会造成单向可见。
-- **TLS 不索要客户端证书**：LocalSend 双方都用自签证书，身份靠指纹固定而非 CA 链。服务端若用 `CERT_OPTIONAL`，Python 会拿系统 CA 校验自签证书并回 `unknown_ca`；TLS 1.3 下客户端证书在握手之后发送，表现为握手正常但一发数据就被拒。
-- **上传按剩余字节读取**：socket 上的 `read(n)` 会阻塞到凑满 n 字节，而对端发完就等响应，直接读会死锁。
-- **文件名当作不可信输入**：只取最后一段阻断路径穿越，替换非法字符，处理 Windows 保留名，按 UTF-8 字符边界截断到 255 字节。临时文件用独立随机名，避免长文件名加后缀后超出文件系统上限。
-- **证书放在配置目录**：指纹是本机在 LocalSend 网络里的身份，放数据目录会在卸载时丢失，导致已配对的设备失效。
-- **透传飞牛环境变量**：以专用用户启动应用时 `runuser` 会重置环境，`TRIM_API_TOKEN` 等变量必须显式传递，否则开放接口调用被拒。
-
 ## 许可
 
 本项目基于 [Apache-2.0](LICENSE) 发布。
