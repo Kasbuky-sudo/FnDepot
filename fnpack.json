@@ -355,6 +355,18 @@
               "updated_at": "2026-09-20T00:37:32+08:00"
             }
           }
+        },
+        "1.2.5": {
+          "changelog": "修复持续占用 CPU 与带宽的问题：此前收到设备的 register 后都会立即回访，两台设备因此无限互相注册，持续建立连接（实测每 10 秒新增数十条 TIME-WAIT，单核占用 90%%以上，线程数持续增长）。现在回访带冷却期（register 来源 5 分钟、多播来源 1 分钟）并增加全局频率上限（12 次/分钟），修复后 CPU 降至 0%%、连接数归零。",
+          "updated_at": "2026-09-20T10:03:59+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/CompareShare-v1.2.5/CompareShare.fpk",
+              "sha256": "05a2e37305dcf9e66171b3efae6d2ed7d2a05feeaa2da592f799a175a8853b99",
+              "size": 134969,
+              "updated_at": "2026-09-20T10:03:59+08:00"
+            }
+          }
         }
       }
     },
