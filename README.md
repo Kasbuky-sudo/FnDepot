@@ -20,7 +20,7 @@ https://github.com/Kasbuky-sudo/FnDepot
 | [网易云音乐 · NAS 版](https://github.com/Kasbuky-sudo/NAS-NEM) | 0.4.1 | all（x86 + arm64） | 8163 | 官方 PC 客户端的 NAS 移植：完整播放器（推荐 / 歌单 / 排行榜 / 歌词 / 搜索）、手机扫码登录、在线播放、歌曲下载到 NAS、登录态跨设备共享、AI 找歌下载（Agent API）；依赖应用中心 nodejs_v22，页内打开 |
 | [Telegram](https://github.com/Kasbuky-sudo/fnos-telegram) | 1.1.0 | all（x86 + arm64） | 8970 | Telegram Web 客户端（tweb / Telegram Web K 前端）的 fnOS 原生打包：HTTPS 自签证书托管，零 pip 依赖；内置 NAS 出口转发（MTProto 中继），局域网设备无需各自配置代理。首次打开需信任一次自签证书 |
 | [米游签 MiyoQian](https://github.com/Marchen-orz/MiyoQian) | 1.0.1 | all（x86 + arm64） | 8966 | 米游社每日签到工具：扫码登录、游戏社区签到、云游戏签到、米游币任务、商品兑换，带 Web 控制台 |
-| [Compare Share](https://github.com/Kasbuky-sudo/CompareShare) | 1.2.4 | all（x86 + arm64） | 11011 / 53317 | 局域网极速互传，基于 LocalSend v2.2 协议：与手机、电脑、平板直接互传文件，无需云端与账号；多播 + 网段扫描双通道发现，纯 Python 实现，一个包通吃双架构。目录授权需 fnOS 1.2.0604 及以上 |
+| [Compare Share](https://github.com/Kasbuky-sudo/CompareShare) | 1.2.5 | all（x86 + arm64） | 11011 / 53317 | 局域网极速互传，基于 LocalSend v2.2 协议：与手机、电脑、平板直接互传文件，无需云端与账号；多播 + 网段扫描双通道发现，纯 Python 实现，一个包通吃双架构。目录授权需 fnOS 1.2.0604 及以上 |
 
 ## 打包说明
 
