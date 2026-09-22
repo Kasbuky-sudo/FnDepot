@@ -35,7 +35,6 @@ https://github.com/Kasbuky-sudo/FnDepot
 - **ZCode 的访问鉴权**：ZCode Web 等于把一个能执行命令的 AI agent 和终端开在 8988 端口上，所以安装向导要求设置「访问令牌」；飞牛会把该值替换进桌面入口路径（`/<令牌>`），入口页脚本再把它写成 `zcode_lite_token` cookie，服务端只对携带该 cookie/令牌的 `/ws`、`/api` 请求放行——**同一局域网内其他设备没有令牌无法使用**。更换令牌：应用设置里改、重启应用生效，无需手动清浏览器缓存。
 - 米游签依赖系统 Python 3.11（飞牛 fnOS 基于 Debian 12，默认满足）。
 - 应用以专用包用户（`run-as: package`）运行；配置、凭证与日志保存在应用配置目录（`@appconf`），升级与重装不丢失。
-- 修改自上游项目 [Marchen-orz/MiyoQian](https://github.com/Marchen-orz/MiyoQian)，应用本体版权归原作者所有。
 
 ## 免责声明
 
