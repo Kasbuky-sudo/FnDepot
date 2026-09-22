@@ -23,7 +23,7 @@
 
 - 首次使用需在 ZCode 里登录 Z.ai 账号（或配置模型 API），登录态保存在 NAS 上
 - 浏览器自动化（CUA）等依赖本机桌面的功能在 NAS 上不可用
-- 首个飞牛版本为真机验收版，遇到问题请到 [NAS-ZCode](https://github.com/Kasbuky-sudo/NAS-ZCode/issues) 反馈
+- 首个飞牛版本（v3.14.0，prerelease）为真机验收版：原生模块与商店 Node 22 的 ABI 兼容性待真机确认，遇到问题请到 [NAS-ZCode](https://github.com/Kasbuky-sudo/NAS-ZCode/issues) 反馈
 
 ## 链接
 

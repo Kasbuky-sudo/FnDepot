@@ -259,7 +259,20 @@
       "install_type": "",
       "is_docker": false,
       "service_port": "8988",
-      "releases": {},
+      "releases": {
+        "3.14.0": {
+          "changelog": "首个飞牛 fnOS 原生打包版本（prerelease）。基于上游 ZCode v3.14.0 的 Web 运行时：Agent 对话、代码工作区、内置终端；服务端权威，关掉浏览器任务继续；复用应用中心 nodejs_v22，原生模块随官方预编译件分发，一个包通吃 x86_64 / arm64；监听端口 8988。⚠ 原生模块与商店 Node 22 的 ABI 兼容性待真机确认。",
+          "updated_at": "2026-09-22T18:20:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/NAS-ZCode/releases/download/v3.14.0/zcode-3.14.0.fpk",
+              "sha256": "9eb60cf4dbacfbb4813ab00b9a196a0ff42c2293c9337f5489c9f71dfe2ec75d",
+              "size": 161473785,
+              "updated_at": "2026-09-22T18:20:00+08:00"
+            }
+          }
+        }
+      },
       "developer": "Z.ai (zai-org)",
       "developer_url": "https://github.com/zai-org/ZCode"
     },
