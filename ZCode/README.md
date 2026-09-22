@@ -17,7 +17,7 @@
 - 完整工作台界面：Agent 对话、任务编排、代码差异视图（与 ZCode 桌面版同一套前端）
 - 内置终端：服务端 node-pty，浏览器里直接用，与桌面端体验一致
 - 服务端权威：关掉浏览器长任务继续跑，回来接着看
-- 内置访问 token：首启自动生成，浏览器经飞牛桌面入口带 token 打开
+- 访问令牌鉴权：桌面入口自动携带令牌（写在入口路径里），局域网其他设备无令牌不可用
 
 ## 访问令牌
 
@@ -28,7 +28,7 @@
 
 - 首次使用需在 ZCode 里登录 Z.ai 账号（或配置模型 API），登录态保存在 NAS 上
 - 浏览器自动化（CUA）等依赖本机桌面的功能在 NAS 上不可用
-- 首个飞牛版本（v3.14.0，prerelease）为真机验收版：原生模块与商店 Node 22 的 ABI 兼容性待真机确认，遇到问题请到 [NAS-ZCode](https://github.com/Kasbuky-sudo/NAS-ZCode/issues) 反馈
+- 验收状态：**x86 机型**已完成真机验收（安装 / 启动 / 面板入口 / WebSocket 鉴权）；**arm64 机型待验收**，内置终端（node-pty）与各机型 ABI 尚未逐一验证。遇到问题请到 [NAS-ZCode](https://github.com/Kasbuky-sudo/NAS-ZCode/issues) 反馈
 
 ## 链接
 
