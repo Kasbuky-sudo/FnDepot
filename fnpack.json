@@ -271,6 +271,18 @@
               "updated_at": "2026-09-22T18:20:00+08:00"
             }
           }
+        },
+        "3.14.1": {
+          "changelog": "修复真机反馈的面板 WebSocket 连接失败（ws://<nas>:8988/ws 401，页面卡在启动）。根因：服务端只放行静态页，/ws 与 /api 需鉴权，而面板入口 URL 未携带令牌；且飞牛会丢弃入口 URL 的查询串，?token= 不可用。现改为：安装向导填「访问令牌」（字段 wizard_path），fnOS 把令牌替换进入口路径，页面加载即自动种鉴权 cookie，桌面图标点开即用。已在 x86 机型真机验收（101 握手 + 面板 iframe 正常渲染）。",
+          "updated_at": "2026-09-22T23:10:00+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/NAS-ZCode/releases/download/v3.14.1/zcode-3.14.1.fpk",
+              "sha256": "c855bab140101a7371627c932460c1e25bb0c356454679b61982649c1ea54d67",
+              "size": 79412546,
+              "updated_at": "2026-09-22T23:10:00+08:00"
+            }
+          }
         }
       },
       "developer": "Z.ai (zai-org)",
