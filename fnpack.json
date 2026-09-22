@@ -265,7 +265,7 @@
           "updated_at": "2026-09-23T00:10:00+08:00",
           "packages": {
             "all": {
-              "download_url": "https://github.com/Kasbuky-sudo/NAS-ZCode/releases/download/v3.14.2/zcode-3.14.2.fpk",
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/ZCode-v3.14.2/zcode-3.14.2.fpk",
               "sha256": "412056ff15c746d40bb8397d77b9309ebabf17e5a547dfc62f41c20b407ee2a2",
               "size": 79412863,
               "updated_at": "2026-09-23T00:10:00+08:00"
