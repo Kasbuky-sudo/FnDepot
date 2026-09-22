@@ -37,4 +37,4 @@ https://github.com/Kasbuky-sudo/FnDepot
 ## 免责声明
 
 本源仅供学习与个人使用。外部源不对外部应用代码、安装包安全性或运行稳定性做审核、担保或背书；使用自动签到工具存在账号风控风险，请低频、保守使用，风险自担。
-| [ZCode](https://github.com/Kasbuky-sudo/NAS-ZCode) | 3.14.1 | all（x86 + arm64） | 8988 | Z.ai 开源的 AI 编程工作台：Agent 对话、代码工作区、内置终端跑在 NAS 上，浏览器 / 飞牛桌面直接用，关掉浏览器任务照常继续；依赖应用中心 Node.js v22，原生模块随官方预编译件分发，一个包通吃 x86_64 / arm64 |
+| [ZCode](https://github.com/Kasbuky-sudo/NAS-ZCode) | 3.14.2 | all（x86 + arm64） | 8988 | Z.ai 开源的 AI 编程工作台：Agent 对话、代码工作区、内置终端跑在 NAS 上，浏览器 / 飞牛桌面直接用，关掉浏览器任务照常继续；依赖应用中心 Node.js v22，原生模块随官方预编译件分发，一个包通吃 x86_64 / arm64 |

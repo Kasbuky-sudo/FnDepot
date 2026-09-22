@@ -260,15 +260,15 @@
       "is_docker": false,
       "service_port": "8988",
       "releases": {
-        "3.14.1": {
-          "changelog": "修复真机反馈的面板 WebSocket 连接失败（ws://<nas>:8988/ws 401，页面卡在启动）。根因：服务端只放行静态页，/ws 与 /api 需鉴权，而面板入口 URL 未携带令牌；且飞牛会丢弃入口 URL 的查询串，?token= 不可用。现改为：安装向导填「访问令牌」（字段 wizard_path），fnOS 把令牌替换进入口路径，页面加载即自动种鉴权 cookie，桌面图标点开即用。已在 x86 机型真机验收（101 握手 + 面板 iframe 正常渲染）。",
-          "updated_at": "2026-09-22T23:10:00+08:00",
+        "3.14.2": {
+          "changelog": "修复重装/更换访问令牌后仍报 WebSocket 连接失败（ws://<nas>:8988/ws 401）：浏览器残留的旧 zcode_lite_token cookie 会让页面带旧令牌握手。入口页脚本改为用当前入口路径的令牌覆盖旧 cookie（仅单段路径，不误伤 OAuth 回跳），升级无需手动清缓存。x86 机型真机验收通过（故意保留旧 cookie 的场景）。",
+          "updated_at": "2026-09-23T00:10:00+08:00",
           "packages": {
             "all": {
-              "download_url": "https://github.com/Kasbuky-sudo/NAS-ZCode/releases/download/v3.14.1/zcode-3.14.1.fpk",
-              "sha256": "c855bab140101a7371627c932460c1e25bb0c356454679b61982649c1ea54d67",
-              "size": 79412546,
-              "updated_at": "2026-09-22T23:10:00+08:00"
+              "download_url": "https://github.com/Kasbuky-sudo/NAS-ZCode/releases/download/v3.14.2/zcode-3.14.2.fpk",
+              "sha256": "412056ff15c746d40bb8397d77b9309ebabf17e5a547dfc62f41c20b407ee2a2",
+              "size": 79412863,
+              "updated_at": "2026-09-23T00:10:00+08:00"
             }
           }
         }
