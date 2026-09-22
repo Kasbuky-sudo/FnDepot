@@ -260,18 +260,6 @@
       "is_docker": false,
       "service_port": "8988",
       "releases": {
-        "3.14.0": {
-          "changelog": "首个飞牛 fnOS 原生打包版本（prerelease）。基于上游 ZCode v3.14.0 的 Web 运行时：Agent 对话、代码工作区、内置终端；服务端权威，关掉浏览器任务继续；复用应用中心 nodejs_v22，原生模块随官方预编译件分发，一个包通吃 x86_64 / arm64；监听端口 8988。⚠ 原生模块与商店 Node 22 的 ABI 兼容性待真机确认。",
-          "updated_at": "2026-09-22T18:20:00+08:00",
-          "packages": {
-            "all": {
-              "download_url": "https://github.com/Kasbuky-sudo/NAS-ZCode/releases/download/v3.14.0/zcode-3.14.0.fpk",
-              "sha256": "9eb60cf4dbacfbb4813ab00b9a196a0ff42c2293c9337f5489c9f71dfe2ec75d",
-              "size": 161473785,
-              "updated_at": "2026-09-22T18:20:00+08:00"
-            }
-          }
-        },
         "3.14.1": {
           "changelog": "修复真机反馈的面板 WebSocket 连接失败（ws://<nas>:8988/ws 401，页面卡在启动）。根因：服务端只放行静态页，/ws 与 /api 需鉴权，而面板入口 URL 未携带令牌；且飞牛会丢弃入口 URL 的查询串，?token= 不可用。现改为：安装向导填「访问令牌」（字段 wizard_path），fnOS 把令牌替换进入口路径，页面加载即自动种鉴权 cookie，桌面图标点开即用。已在 x86 机型真机验收（101 握手 + 面板 iframe 正常渲染）。",
           "updated_at": "2026-09-22T23:10:00+08:00",
