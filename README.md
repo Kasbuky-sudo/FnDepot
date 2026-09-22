@@ -21,6 +21,7 @@ https://github.com/Kasbuky-sudo/FnDepot
 | [Telegram](https://github.com/Kasbuky-sudo/fnos-telegram) | 1.1.0 | all（x86 + arm64） | 8970 | Telegram Web 客户端（tweb / Telegram Web K 前端）的 fnOS 原生打包：HTTPS 自签证书托管，零 pip 依赖；内置 NAS 出口转发（MTProto 中继），局域网设备无需各自配置代理。首次打开需信任一次自签证书 |
 | [米游签 MiyoQian](https://github.com/Marchen-orz/MiyoQian) | 1.0.1 | all（x86 + arm64） | 8966 | 米游社每日签到工具：扫码登录、游戏社区签到、云游戏签到、米游币任务、商品兑换，带 Web 控制台 |
 | [Compare Share](https://github.com/Kasbuky-sudo/CompareShare) | 1.2.5 | all（x86 + arm64） | 11011 / 53317 | 局域网极速互传，基于 LocalSend v2.2 协议：与手机、电脑、平板直接互传文件，无需云端与账号；多播 + 网段扫描双通道发现，纯 Python 实现，一个包通吃双架构。目录授权需 fnOS 1.2.0604 及以上 |
+| [ZCode](https://github.com/Kasbuky-sudo/NAS-ZCode) | 3.14.2 | all（x86 + arm64） | 8988 | Z.ai 开源的 AI 编程工作台：Agent 对话、代码工作区、内置终端跑在 NAS 上，浏览器 / 飞牛桌面直接用，关掉浏览器任务照常继续；依赖应用中心 Node.js v22，原生模块随官方预编译件分发，一个包通吃 x86_64 / arm64；安装时设置访问令牌，桌面入口自动携带，页内打开 |
 
 ## 打包说明
 
@@ -37,4 +38,3 @@ https://github.com/Kasbuky-sudo/FnDepot
 ## 免责声明
 
 本源仅供学习与个人使用。外部源不对外部应用代码、安装包安全性或运行稳定性做审核、担保或背书；使用自动签到工具存在账号风控风险，请低频、保守使用，风险自担。
-| [ZCode](https://github.com/Kasbuky-sudo/NAS-ZCode) | 3.14.2 | all（x86 + arm64） | 8988 | Z.ai 开源的 AI 编程工作台：Agent 对话、代码工作区、内置终端跑在 NAS 上，浏览器 / 飞牛桌面直接用，关掉浏览器任务照常继续；依赖应用中心 Node.js v22，原生模块随官方预编译件分发，一个包通吃 x86_64 / arm64 |
