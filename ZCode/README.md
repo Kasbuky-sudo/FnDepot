@@ -28,6 +28,7 @@
 
 - 首次使用需在 ZCode 里登录 Z.ai 账号（或配置模型 API），登录态保存在 NAS 上
 - 浏览器自动化（CUA）等依赖本机桌面的功能在 NAS 上不可用
+- 已知问题（非本包问题）：模型设置里「体验套餐 / Start Plan」一栏可能显示"获取失败"。上游接口 `zcode.z.ai/api/v1/zcode-plan/billing/balance` 对没有体验套餐权益的账号（如个人版编码套餐）返回笼统的 400 `parameter error`，客户端按硬失败处理。不影响你在用的编码套餐；详见源码仓库 `docs/已知问题-套餐查询-3001.md`。
 - 验收状态：**x86 机型**已完成真机验收（安装 / 启动 / 面板入口 / WebSocket 鉴权）；**arm64 机型待验收**，内置终端（node-pty）与各机型 ABI 尚未逐一验证。遇到问题请到 [NAS-ZCode](https://github.com/Kasbuky-sudo/NAS-ZCode/issues) 反馈
 
 ## 链接
