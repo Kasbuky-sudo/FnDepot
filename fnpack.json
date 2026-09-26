@@ -260,15 +260,15 @@
       "is_docker": false,
       "service_port": "8988",
       "releases": {
-        "3.14.2": {
-          "changelog": "修复重装/更换访问令牌后仍报 WebSocket 连接失败（ws://<nas>:8988/ws 401）：浏览器残留的旧 zcode_lite_token cookie 会让页面带旧令牌握手。入口页脚本改为用当前入口路径的令牌覆盖旧 cookie（仅单段路径，不误伤 OAuth 回跳），升级无需手动清缓存。x86 机型真机验收通过（故意保留旧 cookie 的场景）。",
-          "updated_at": "2026-09-23T00:10:00+08:00",
+        "3.14.3": {
+          "changelog": "跟随上游 ZCode v3.14.3 重新构建运行时；飞牛适配层与 3.14.2 一致（访问令牌进桌面入口路径、安装向导、跨卷 Node 解析、进程组回收）。",
+          "updated_at": "2026-09-26T16:30:00+08:00",
           "packages": {
             "all": {
-              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/ZCode-v3.14.2/zcode-3.14.2.fpk",
-              "sha256": "412056ff15c746d40bb8397d77b9309ebabf17e5a547dfc62f41c20b407ee2a2",
-              "size": 79412863,
-              "updated_at": "2026-09-23T00:10:00+08:00"
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/ZCode-v3.14.3/zcode-3.14.3.fpk",
+              "sha256": "222aa06294b07d98b37e3007ab000e97c44caa9f05e75dc4159649c60518b7c5",
+              "size": 80535030,
+              "updated_at": "2026-09-26T16:30:00+08:00"
             }
           }
         }
