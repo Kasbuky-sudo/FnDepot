@@ -25,7 +25,7 @@ https://github.com/Kasbuky-sudo/FnDepot
 
 ## 打包说明
 
-- **旅行青蛙 · NAS 版**依赖应用中心商店的 Node.js v22（`nodejs_v22`），安装时会作为前置依赖一并装上（manifest 里声明了 `install_dep_apps`）；应用本体只含纯 JavaScript 与游戏运行时资源，包内原生模块数量为 0。它的 `.fpk` 有 237MB，**超过 GitHub 单文件 100MB 上限**，因此和米游签一样走 Release 资产分发，不进版本库。
+- **旅行青蛙 · NAS 版**依赖应用中心商店的 Node.js v22（`nodejs_v22`），安装时会作为前置依赖一并装上（manifest 里声明了 `install_dep_apps`）；应用本体只含纯 JavaScript 与游戏运行时资源，包内原生模块数量为 0。它的 `.fpk` 有 237MB，**超过 GitHub 单文件 100MB 上限**，因此和米游签一样走 Release 资产分发，不进版本库。**手机端注意**：鸿蒙版飞牛 App 需 **1.37.0 及以上** —— 更早的版本点开图标会卡在加载（桌面页把游戏指向 `fnconnect` 域名，整局游戏的资源都走中继），**1.37.0 起已修复，可以正常打开游戏**；升级前想先验证，用手机浏览器直连 `http://<NAS_IP>:8980` 即可。
 - **网易云音乐 · NAS 版**同样依赖应用中心商店的 Node.js v22（`nodejs_v22`，manifest 里声明了 `install_dep_apps`）；应用本体只含纯 JavaScript，包内原生模块数量为 0，一个包 37MB。它的 `.fpk` 同样走 Release 资产分发，不进版本库（tag: `NETEASE_CLOUD_MUSIC-v0.4.1`）。
 - **Compare Share** 是纯 Python 标准库实现，不依赖任何第三方包与预编译二进制，因此一个包直接通吃 x86_64 / arm64；依赖系统 Python 3（飞牛 fnOS 基于 Debian 12，默认满足）。它同时监听 53317（LocalSend 协议，HTTPS）与 11011（Web 界面），包体仅约 112 KB，配置与证书存放在应用配置目录，重装后设备指纹保持不变。目录授权功能需要飞牛系统 **1.2.0604 及以上**：低版本系统不会把目录授权下发给第三方应用，实测 1.2.0302 不支持。不授权的功能不受影响，仍可使用默认收件目录。
 - **Telegram** 基于 [tweb](https://github.com/morethanwords/tweb)（GPL-3.0，Telegram 官方 Web K 前端）构建：Python3 标准库静态托管 + HTTPS 自签证书（openssl 不可用时用 cryptography 包兜底生成，证书存应用配置目录，升级不重生成）。首版注意：tweb 在纯 HTTP 下崩溃（`caches is not defined`，CacheStorage/WebCrypto 需 secure context），故服务端强制 HTTPS；ServiceWorker 对自签证书的校验独立于浏览器例外（必失败），安装时通过注入脚本自动跳过（`?noServiceWorker=1`）。出口转发仅中继 Telegram 官方域名（白名单），不缓存任何聊天数据。43.5MB，走 Release 资产分发（tag: `v1.1.0`，仓库 `Kasbuky-sudo/fnos-telegram`）；应用信息中开发者 = Telegram（上游 tweb），发布者 = Kasbuky。
