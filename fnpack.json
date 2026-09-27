@@ -163,6 +163,18 @@
               "updated_at": "2026-09-20T11:00:49+08:00"
             }
           }
+        },
+        "1.0.6": {
+          "changelog": "出包不再携带开发旁注。引擎（__offline-engine.js）与离线壳（__probe.js）是移植期我们自己写的，里面带着大量设计笔记——为什么某条规则是这样、当时实测到什么、哪个客户端函数逼出了这个决定（例如「Codes 101/102 are not guesses」「now CONFIRMED rather than guessed」「【自设计·换算】」）。放在仓库里是有用的资料，但跟着 .fpk 发出去就等于公开工作笔记：包谁都能下载解开。本版起在打包时对暂存副本剥离这两个文件的注释（约 2611 + 472 行、281 KB），出包只含游戏本体与必要代码；源目录与 vendor/ 逐字节不变，版权与生成声明保留。功能无变化：剥离版跑全套测试 210/210，出包后再从包里取文件复查，旁注类字眼 0 处。",
+          "updated_at": "2026-09-27T11:44:46+08:00",
+          "packages": {
+            "all": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/frog-nas-v1.0.6/frog-nas-1.0.6.fpk",
+              "sha256": "b21dfad96aea1e572172c7b3b9db53b7b227c41d95e0987bc20222daf18e95b8",
+              "size": 248143354,
+              "updated_at": "2026-09-27T11:44:46+08:00"
+            }
+          }
         }
       }
     },
