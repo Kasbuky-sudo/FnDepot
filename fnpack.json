@@ -386,8 +386,8 @@
           "packages": {
             "all": {
               "download_url": "https://github.com/Kasbuky-sudo/fnos-telegram/releases/download/v1.1.0/Telegram-1.1.0.fpk",
-              "sha256": "6ba31dafb31b1513bfb59038c80b9c65b9d74cc060e0ed0fb7d0bf7aa0eab966",
-              "size": 45572275,
+              "sha256": "f96f348fc98351b059e7b708f5c2fd3ae9879f2567d2622de8c235201c1d60e1",
+              "size": 45580077,
               "updated_at": "2026-09-19T14:40:00+08:00"
             }
           }
