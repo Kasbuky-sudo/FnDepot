@@ -393,6 +393,44 @@
           }
         }
       }
+    },
+    "WorkBuddy": {
+      "display_name": "WorkBuddy",
+      "desc": "腾讯 WorkBuddy 的飞牛 fnOS 原生版（非 Docker、非桌面串流）：服务端跑在 NAS 上，浏览器 / 飞牛桌面直接打开完整工作台——Agent 对话、文件与终端操作、办公文档、专家技能与 MCP/Skills；登录态和工作区保存在 NAS 上。本包为 x86_64 专用（暂不支持 arm64），原生 Node.js 运行，复用应用中心 Node.js v22。",
+      "platform": [
+        "x86"
+      ],
+      "categories": [
+        "AI赋能",
+        "系统工具"
+      ],
+      "icon_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/WorkBuddy/icons/icon_256.png",
+      "readme_url": "https://raw.githubusercontent.com/Kasbuky-sudo/FnDepot/main/WorkBuddy/README.md",
+      "bug_report_url": "https://github.com/Kasbuky-sudo/FnDepot/issues",
+      "maintainer": "Tencent Technology (Shenzhen) Company Limited",
+      "maintainer_url": "https://www.workbuddy.cn",
+      "distributor": "Kasbuky",
+      "distributor_url": "https://github.com/Kasbuky-sudo",
+      "run_as": "package",
+      "install_type": "",
+      "is_docker": false,
+      "service_port": "28471",
+      "releases": {
+        "5.6.2": {
+          "changelog": "首个飞牛 fnOS 原生版本：基于 WorkBuddy Linux 5.6.2 运行时做 Web 适配，服务端跑在 NAS 上，浏览器 / fnOS 桌面直接使用；依赖应用中心 Node.js v22（install_dep_apps = nodejs_v22）；x86_64 专用，暂不支持 arm64；端口 28471；安装向导设置访问令牌，桌面入口自动携带。修复局域网 HTTP 入口下 crypto.randomUUID 缺失导致点击登录无反应的问题。",
+          "updated_at": "2026-10-21T00:42:19+08:00",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/WorkBuddy-v5.6.2/workbuddy-5.6.2-x86.fpk",
+              "sha256": "4e4c40f99056b8dbb110bca51320ee3bce5021bbb9b9552a9458bd6383bac184",
+              "size": 257161900,
+              "updated_at": "2026-10-21T00:42:19+08:00"
+            }
+          }
+        }
+      },
+      "developer": "Tencent Technology (Shenzhen) Company Limited",
+      "developer_url": "https://www.workbuddy.cn"
     }
   }
 }
