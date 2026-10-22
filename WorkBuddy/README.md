@@ -1,11 +1,11 @@
-# WorkBuddy · 飞牛 fnOS 原生版（x86_64）
+# WorkBuddy · 飞牛 fnOS 原生版（x86_64 / arm64）
 
 把腾讯 WorkBuddy 的 Linux 运行时适配成飞牛 fnOS 的**原生 Web 应用**（非 Docker、非桌面串流）：
 服务端跑在 NAS 上，浏览器 / 飞牛桌面里直接用完整工作台——Agent 对话、文件与终端操作、办公文档、专家技能、MCP / Skills，关掉浏览器后任务仍在 NAS 上继续。
 
 - **开发者**：腾讯科技（深圳）有限公司（WorkBuddy，专有软件）
 - **飞牛移植 / 打包 / 发布**：[Kasbuky-sudo](https://github.com/Kasbuky-sudo)
-- **仅支持 x86_64**，暂不支持 arm64（包内原生模块为 linux-x64）
+- **同时支持 x86_64 与 arm64**，两个独立安装包；原生模块按架构提供 linux-x64 / linux-arm64
 - 原生 Node.js 运行，复用应用中心 **Node.js v22**（`nodejs_v22`，manifest 里声明了 `install_dep_apps`，安装时作为前置依赖自动装上）
 - 端口 **28471**，桌面图标页内（iframe）打开
 - 登录态与工作区保存在 NAS 上，升级 / 重装后保留
@@ -22,12 +22,12 @@
 ## 安装与依赖
 
 1. 在飞牛应用中心确认应用商店可用（本应用依赖 **Node.js v22**，应用中心会按 `install_dep_apps` 自动安装 / 启用）；
-2. 从 [Releases](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.2) 下载 `workbuddy-5.6.2.2-x86.fpk`；
+2. 从 [Releases](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.2) 按设备架构下载 `workbuddy-5.6.2.2-x86.fpk`（x86_64）或 `workbuddy-5.6.2.2-arm64.fpk`（arm64）；
 3. 应用中心 → 手动安装 → 选择 fpk；
 4. 安装时填写「访问令牌」（8-64 位字母、数字、下划线或中划线）；
 5. 安装完成后从桌面图标打开。
 
-> 仅支持 x86_64 设备。arm64 设备暂不可安装。
+> 支持 x86_64 与 arm64 设备；请按设备架构选择对应 fpk，不能混装。
 
 ## 访问令牌
 
@@ -49,7 +49,7 @@
 
 ## 已知限制
 
-- **x86_64 only**：包内 `better-sqlite3`、`@tencent/qimei-node` 等原生模块为 linux-x64，暂未提供 arm64 构建。
+- **双架构**：x86_64 与 arm64 分别打包；ARM 包内 `better-sqlite3`、`node-pty`、`@tencent/qimei-node`、腾讯文档引擎等均为 aarch64。
 - 依赖桌面 Chromium 的功能（如浏览器自动化 / Computer Use、本地模型管理等）在纯 NAS 环境下不可用或受限。
 - 首次启动与登录需要外网；内网离线环境只能打开界面，无法完成账号登录。
 - 应用更新仍通过 FnDepot / fpk 升级，不走 WorkBuddy 桌面版自动更新。
@@ -57,6 +57,7 @@
 ## 本版修复（5.6.2.2）
 
 - 修复设备在线：补发 `extensions:activateByEvent('onStartup')`，启动常驻 edge-sync 扩展，生成 device-id / edge-sync-mapping-v4.db 并建立云端长连接。
+- 新增 arm64 安装包：x86_64 / arm64 分别打包，ARM 原生模块全部 aarch64。
 - 修复发送消息无反应：`__wbInvoke` 之前只转发前两个参数，导致工作空间检查与任务创建参数丢失。
 - 补齐 `wb:internal:conversation-event-subscription` 的桌面端聚合与转发，会话事件订阅不再报 `no handler`。
 - 修复工作空间相对路径解析、`cmd/main` 把 `TIME_WAIT` 误判为监听，以及桌面主进程专用通道的 no-op 处理。
@@ -65,9 +66,8 @@
 ## 包信息
 
 - Release：[WorkBuddy-v5.6.2.2](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.2)
-- 文件：`workbuddy-5.6.2.2-x86.fpk`
-- 大小：257,168,727 bytes（约 246 MiB）
-- SHA-256：`84fe6e8af25ee2133f01ecf186630121fa6cde5f10f3f5efa233ff56592c02d9`
+- x86_64：`workbuddy-5.6.2.2-x86.fpk`，257,168,727 bytes（约 246 MiB），SHA-256 `84fe6e8af25ee2133f01ecf186630121fa6cde5f10f3f5efa233ff56592c02d9`
+- arm64：`workbuddy-5.6.2.2-arm64.fpk`，252,651,980 bytes（约 241 MiB），SHA-256 `27f1e3d118bb712963bc3c088f9797846dd562eff61592a57cd40641dbb51924`
 
 ## 链接
 
