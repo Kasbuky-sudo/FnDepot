@@ -22,7 +22,7 @@
 ## 安装与依赖
 
 1. 在飞牛应用中心确认应用商店可用（本应用依赖 **Node.js v22**，应用中心会按 `install_dep_apps` 自动安装 / 启用）；
-2. 从 [Releases](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.2) 按设备架构下载 `workbuddy-5.6.2.2-x86.fpk`（x86_64）或 `workbuddy-5.6.2.2-arm64.fpk`（arm64）；
+2. 从 [Releases](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.3) 按设备架构下载 `workbuddy-5.6.2.3-x86.fpk`（x86_64）或 `workbuddy-5.6.2.3-arm64.fpk`（arm64）；
 3. 应用中心 → 手动安装 → 选择 fpk；
 4. 安装时填写「访问令牌」（8-64 位字母、数字、下划线或中划线）；
 5. 安装完成后从桌面图标打开。
@@ -54,20 +54,19 @@
 - 首次启动与登录需要外网；内网离线环境只能打开界面，无法完成账号登录。
 - 应用更新仍通过 FnDepot / fpk 升级，不走 WorkBuddy 桌面版自动更新。
 
-## 本版修复（5.6.2.2）
+## 本版修复（5.6.2.3）
 
-- 修复设备在线：补发 `extensions:activateByEvent('onStartup')`，启动常驻 edge-sync 扩展，生成 device-id / edge-sync-mapping-v4.db 并建立云端长连接。
-- 新增 arm64 安装包：x86_64 / arm64 分别打包，ARM 原生模块全部 aarch64。
-- 修复发送消息无反应：`__wbInvoke` 之前只转发前两个参数，导致工作空间检查与任务创建参数丢失。
-- 补齐 `wb:internal:conversation-event-subscription` 的桌面端聚合与转发，会话事件订阅不再报 `no handler`。
-- 修复工作空间相对路径解析、`cmd/main` 把 `TIME_WAIT` 误判为监听，以及桌面主进程专用通道的 no-op 处理。
+- 修复 MCP / `sheetagent` 未连接：NAS 版没有 Electron 主进程，daemon 之前以 `connect-only` 等待一个永远不会被拉起的 `sandbox-center`。本版让 daemon 自行拉起 `sandbox-center`（`spawn-if-missing`）、补齐 `executablePath`，并统一 daemon 与 `sandbox-cli` 的 socket 地址；`editor_sdk` 沙盒恢复，`connector-proxy` / `agent-mail` / `genie-baas` / `weixinpay` / `sheetagent` 全部 connected。
+- 修复 `restart` 停不掉 daemon：`cmd/main` 按真实路径匹配 adapter/daemon，并清理 `editor_sdk` / `sandbox-center` / `sandbox-cli` 孤儿进程。
+- 启动时继续 chown 应用数据目录，自动修复 `security/<uid>` 被其他用户占用导致的“建安全目录失败 / Operation not permitted”。
+- 保留 5.6.2.2 的设备在线与发送修复：`extensions:activateByEvent('onStartup')`、`__wbInvoke` 全参数转发、会话事件订阅聚合、工作空间相对路径解析、只把 LISTEN 当监听。
 - 应用内核仍为 WorkBuddy 5.6.2；本版本号是飞牛打包修订版。
 
 ## 包信息
 
-- Release：[WorkBuddy-v5.6.2.2](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.2)
-- x86_64：`workbuddy-5.6.2.2-x86.fpk`，257,168,727 bytes（约 246 MiB），SHA-256 `84fe6e8af25ee2133f01ecf186630121fa6cde5f10f3f5efa233ff56592c02d9`
-- arm64：`workbuddy-5.6.2.2-arm64.fpk`，252,651,980 bytes（约 241 MiB），SHA-256 `27f1e3d118bb712963bc3c088f9797846dd562eff61592a57cd40641dbb51924`
+- Release：[WorkBuddy-v5.6.2.3](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.3)
+- x86_64：`workbuddy-5.6.2.3-x86.fpk`，257,168,395 bytes（约 246 MiB），SHA-256 `fbacf15e0c18739ed086a79e1cbb65a9168b3deabe47bf8f71dbd50d2e706390`
+- arm64：`workbuddy-5.6.2.3-arm64.fpk`，252,652,984 bytes（约 241 MiB），SHA-256 `b263c6eb4056c33bd5f2c6734be8751137d8f12dd7fbcdac28f2454554ad6452`
 
 ## 链接
 
