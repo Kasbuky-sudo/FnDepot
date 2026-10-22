@@ -1,6 +1,6 @@
 # FnDepot · 飞牛第三方应用源
 
-自打包的飞牛 fnOS **第三方原生应用源**（非 Docker），多数应用兼容 **x86 与 arm64**；WorkBuddy 同时支持 x86_64 与 arm64。
+自打包的飞牛 fnOS **第三方原生应用源**（非 Docker），多数应用兼容 **x86 与 arm64**。
 
 遵循 [FnDepot 外部应用源 V2 规范](https://github.com/EWEDLCM/FnDepot)，仓库根目录的 `fnpack.json` 即源索引文件。
 
