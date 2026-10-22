@@ -416,15 +416,15 @@
       "is_docker": false,
       "service_port": "28471",
       "releases": {
-        "5.6.2.1": {
-          "changelog": "修复发送消息无反应：__wbInvoke 之前只转发前两个参数，导致 workspace:checkPathExists 与任务创建参数丢失；补齐会话事件订阅 wb:internal:conversation-event-subscription 的桌面端聚合转发；修复工作空间相对路径解析、cmd/main 把 TIME_WAIT 误判为监听、桌面主进程专用通道 no-op。应用内核仍为 WorkBuddy 5.6.2；x86_64 专用。",
-          "updated_at": "2026-10-21T23:26:47+08:00",
+        "5.6.2.2": {
+          "changelog": "修复设备在线：补发 extensions:activateByEvent('onStartup')，启动常驻 edge-sync 扩展，生成 device-id / edge-sync-mapping-v4.db 并建立云端长连接，手机端 WorkBuddy 能看到 NAS 设备在线。保留 5.6.2.1 的发送修复：__wbInvoke 参数完整转发、会话事件订阅聚合转发、工作空间相对路径解析、cmd/main 只把 LISTEN 当监听。应用内核仍为 WorkBuddy 5.6.2；x86_64 专用。",
+          "updated_at": "2026-10-22T12:38:46+08:00",
           "packages": {
             "x86": {
-              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/WorkBuddy-v5.6.2.1/workbuddy-5.6.2.1-x86.fpk",
-              "sha256": "57c1128313c23d246e48e56ee0e863209dd2e5d09f54fa531e1ee597d477e72f",
-              "size": 257164047,
-              "updated_at": "2026-10-21T23:26:47+08:00"
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/WorkBuddy-v5.6.2.2/workbuddy-5.6.2.2-x86.fpk",
+              "sha256": "84fe6e8af25ee2133f01ecf186630121fa6cde5f10f3f5efa233ff56592c02d9",
+              "size": 257168727,
+              "updated_at": "2026-10-22T12:38:46+08:00"
             }
           }
         }
