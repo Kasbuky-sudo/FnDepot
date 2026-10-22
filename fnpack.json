@@ -417,6 +417,24 @@
       "is_docker": false,
       "service_port": "28471",
       "releases": {
+        "5.6.2.3": {
+          "changelog": "修复 MCP / sheetagent 未连接：NAS 版没有 Electron 主进程，daemon 之前以 connect-only 等待永远不会被拉起的 sandbox-center。本版让 daemon 自行拉起 sandbox-center（spawn-if-missing）、补齐 executablePath，并统一 daemon 与 sandbox-cli 的 socket 地址；editor_sdk 沙盒恢复，connector-proxy / agent-mail / genie-baas / weixinpay / sheetagent 全部 connected。修复 restart 停不掉 daemon（按真实路径匹配并清理 editor_sdk / sandbox-center 孤儿进程）；启动时 chown 数据目录，自动修复 security/<uid> 归属导致的建目录失败。应用内核仍为 WorkBuddy 5.6.2；x86_64 与 arm64 双包。",
+          "updated_at": "2026-10-22T16:46:42+08:00",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/WorkBuddy-v5.6.2.3/workbuddy-5.6.2.3-x86.fpk",
+              "sha256": "fbacf15e0c18739ed086a79e1cbb65a9168b3deabe47bf8f71dbd50d2e706390",
+              "size": 257168395,
+              "updated_at": "2026-10-22T16:46:42+08:00"
+            },
+            "arm": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/WorkBuddy-v5.6.2.3/workbuddy-5.6.2.3-arm64.fpk",
+              "sha256": "b263c6eb4056c33bd5f2c6734be8751137d8f12dd7fbcdac28f2454554ad6452",
+              "size": 252652984,
+              "updated_at": "2026-10-22T16:46:42+08:00"
+            }
+          }
+        },
         "5.6.2.2": {
           "changelog": "5.6.2.2 同时提供 x86_64 与 arm64：修复设备在线（补发 extensions:activateByEvent('onStartup')，启动 edge-sync、生成 device-id 并建立云端长连接）；保留发送修复（__wbInvoke 参数完整转发、会话事件订阅聚合转发、工作空间相对路径解析、cmd/main 只把 LISTEN 当监听）。应用内核仍为 WorkBuddy 5.6.2。",
           "updated_at": "2026-10-22T13:29:14+08:00",
