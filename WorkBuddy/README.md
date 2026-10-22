@@ -22,7 +22,7 @@
 ## 安装与依赖
 
 1. 在飞牛应用中心确认应用商店可用（本应用依赖 **Node.js v22**，应用中心会按 `install_dep_apps` 自动安装 / 启用）；
-2. 从 [Releases](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.1) 下载 `workbuddy-5.6.2.1-x86.fpk`；
+2. 从 [Releases](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.2) 下载 `workbuddy-5.6.2.2-x86.fpk`；
 3. 应用中心 → 手动安装 → 选择 fpk；
 4. 安装时填写「访问令牌」（8-64 位字母、数字、下划线或中划线）；
 5. 安装完成后从桌面图标打开。
@@ -54,8 +54,9 @@
 - 首次启动与登录需要外网；内网离线环境只能打开界面，无法完成账号登录。
 - 应用更新仍通过 FnDepot / fpk 升级，不走 WorkBuddy 桌面版自动更新。
 
-## 本版修复（5.6.2.1）
+## 本版修复（5.6.2.2）
 
+- 修复设备在线：补发 `extensions:activateByEvent('onStartup')`，启动常驻 edge-sync 扩展，生成 device-id / edge-sync-mapping-v4.db 并建立云端长连接。
 - 修复发送消息无反应：`__wbInvoke` 之前只转发前两个参数，导致工作空间检查与任务创建参数丢失。
 - 补齐 `wb:internal:conversation-event-subscription` 的桌面端聚合与转发，会话事件订阅不再报 `no handler`。
 - 修复工作空间相对路径解析、`cmd/main` 把 `TIME_WAIT` 误判为监听，以及桌面主进程专用通道的 no-op 处理。
@@ -63,10 +64,10 @@
 
 ## 包信息
 
-- Release：[WorkBuddy-v5.6.2.1](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.1)
-- 文件：`workbuddy-5.6.2.1-x86.fpk`
-- 大小：257,164,047 bytes（约 246 MiB）
-- SHA-256：`57c1128313c23d246e48e56ee0e863209dd2e5d09f54fa531e1ee597d477e72f`
+- Release：[WorkBuddy-v5.6.2.2](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.2)
+- 文件：`workbuddy-5.6.2.2-x86.fpk`
+- 大小：257,168,727 bytes（约 246 MiB）
+- SHA-256：`84fe6e8af25ee2133f01ecf186630121fa6cde5f10f3f5efa233ff56592c02d9`
 
 ## 链接
 
