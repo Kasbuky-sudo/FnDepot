@@ -394,7 +394,7 @@
         }
       }
     },
-    "WorkBuddy": {
+    "workbuddy": {
       "display_name": "WorkBuddy",
       "desc": "腾讯 WorkBuddy 的飞牛 fnOS 原生版（非 Docker、非桌面串流）：服务端跑在 NAS 上，浏览器 / 飞牛桌面直接打开完整工作台——Agent 对话、文件与终端操作、办公文档、专家技能与 MCP/Skills；登录态和工作区保存在 NAS 上。本包同时提供 x86_64 与 arm64 两个安装包，原生 Node.js 运行，复用应用中心 Node.js v22。",
       "platform": [
