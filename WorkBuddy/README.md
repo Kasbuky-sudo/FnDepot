@@ -22,7 +22,7 @@
 ## 安装与依赖
 
 1. 在飞牛应用中心确认应用商店可用（本应用依赖 **Node.js v22**，应用中心会按 `install_dep_apps` 自动安装 / 启用）；
-2. 从 [Releases](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.3) 按设备架构下载 `workbuddy-5.6.2.3-x86.fpk`（x86_64）或 `workbuddy-5.6.2.3-arm64.fpk`（arm64）；
+2. 从 [Releases](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.4) 按设备架构下载 `workbuddy-5.6.2.4-x86.fpk`（x86_64）或 `workbuddy-5.6.2.4-arm64.fpk`（arm64）；
 3. 应用中心 → 手动安装 → 选择 fpk；
 4. 安装时填写「访问令牌」（8-64 位字母、数字、下划线或中划线）；
 5. 安装完成后从桌面图标打开。
@@ -30,6 +30,8 @@
 > 支持 x86_64 与 arm64 设备；请按设备架构选择对应 fpk，不能混装。
 >
 > 想让 FnDepot 显示「可更新」并接收后续版本提示，请通过 FnDepot 安装或覆盖安装本应用；直接手动安装的 fpk 会被 FnDepot 视为「本地应用」，按 FnDepot 的规则不提供更新入口。
+>
+> 卸载时请选择「保留数据」（默认选项），登录态、MCP / 技能配置和会话会保留在应用数据目录，重新安装后可直接恢复。
 
 ## 访问令牌
 
@@ -56,8 +58,9 @@
 - 首次启动与登录需要外网；内网离线环境只能打开界面，无法完成账号登录。
 - 应用更新仍通过 FnDepot / fpk 升级，不走 WorkBuddy 桌面版自动更新。
 
-## 本版修复（5.6.2.3）
+## 本版修复（5.6.2.4）
 
+- 修复启动脚本进程存活误判：`cmd/main` 的 `pid_alive` 原来用 shell `case` glob 匹配 ERE（含 `?`、`|`、`()`、`[.]`），永远匹配不上，导致启动后先打印 `process exited before listening`，应用中心随后把仍在运行的服务收掉。现改为 `grep -Eq` 正确走正则；启动日志正常出现 `started, port 28471 listening`，daemon ready，端口 28471 正常监听。
 - 修复 MCP / `sheetagent` 未连接：NAS 版没有 Electron 主进程，daemon 之前以 `connect-only` 等待一个永远不会被拉起的 `sandbox-center`。本版让 daemon 自行拉起 `sandbox-center`（`spawn-if-missing`）、补齐 `executablePath`，并统一 daemon 与 `sandbox-cli` 的 socket 地址；`editor_sdk` 沙盒恢复，`connector-proxy` / `agent-mail` / `genie-baas` / `weixinpay` / `sheetagent` 全部 connected。
 - 修复 `restart` 停不掉 daemon：`cmd/main` 按真实路径匹配 adapter/daemon，并清理 `editor_sdk` / `sandbox-center` / `sandbox-cli` 孤儿进程。
 - 启动时继续 chown 应用数据目录，自动修复 `security/<uid>` 被其他用户占用导致的“建安全目录失败 / Operation not permitted”。
@@ -66,9 +69,13 @@
 
 ## 包信息
 
-- Release：[WorkBuddy-v5.6.2.3](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.3)
-- x86_64：`workbuddy-5.6.2.3-x86.fpk`，257,168,395 bytes（约 246 MiB），SHA-256 `fbacf15e0c18739ed086a79e1cbb65a9168b3deabe47bf8f71dbd50d2e706390`
-- arm64：`workbuddy-5.6.2.3-arm64.fpk`，252,652,984 bytes（约 241 MiB），SHA-256 `b263c6eb4056c33bd5f2c6734be8751137d8f12dd7fbcdac28f2454554ad6452`
+- Release：[WorkBuddy-v5.6.2.4](https://github.com/Kasbuky-sudo/FnDepot/releases/tag/WorkBuddy-v5.6.2.4)
+- x86_64：`workbuddy-5.6.2.4-x86.fpk`，257,172,200 bytes（约 246 MiB），SHA-256 `a049049f194a6a40290fa1ca9987e306bdbed7dd85449e5b7fd8f577e0b34103`
+- arm64：`workbuddy-5.6.2.4-arm64.fpk`，252,656,058 bytes（约 241 MiB），SHA-256 `2c15037f1bcb9786974419252a9f363498394cb224dcd17a2b1b74d9bb47a92d`
+
+## 致谢
+
+- 感谢酷安 **@城北徐公Doreen** 反馈并定位启动脚本 `pid_alive` 的 glob / 正则 bug。
 
 ## 链接
 
