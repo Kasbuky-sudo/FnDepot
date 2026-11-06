@@ -21,8 +21,12 @@ https://github.com/Kasbuky-sudo/FnDepot
 | [Telegram](https://github.com/Kasbuky-sudo/fnos-telegram) | 1.1.0 | all（x86 + arm64） | 8970 | Telegram Web 客户端（tweb / Telegram Web K 前端）的 fnOS 原生打包：HTTPS 自签证书托管，零 pip 依赖；内置 NAS 出口转发（MTProto 中继），局域网设备无需各自配置代理。首次打开需信任一次自签证书 |
 | [米游签 MiyoQian](https://github.com/Marchen-orz/MiyoQian) | 1.0.2 | all（x86 + arm64） | 8966 | 米游社每日签到工具：扫码登录、游戏社区签到、云游戏签到、米游币任务、商品兑换，带 Web 控制台 |
 | [Compare Share](https://github.com/Kasbuky-sudo/CompareShare) | 1.2.5 | all（x86 + arm64） | 11011 / 53317 | 局域网极速互传，基于 LocalSend v2.2 协议：与手机、电脑、平板直接互传文件，无需云端与账号；多播 + 网段扫描双通道发现，纯 Python 实现，一个包通吃双架构。目录授权需 fnOS 1.2.0604 及以上 |
-| [WorkBuddy](https://github.com/Kasbuky-sudo/FnDepot/tree/main/WorkBuddy) | 5.6.2.3 | x86 + arm64 | 28471 | 腾讯 WorkBuddy 的 fnOS 原生版（非 Docker）：Agent 对话、文件 / 终端操作、办公文档、专家技能与 MCP/Skills；登录态和工作区保存在 NAS；依赖应用中心 Node.js v22；同时支持 x86_64 与 arm64（两个独立包）；5.6.2.3 修复 sheetagent MCP 与沙盒引擎 |
+| [WorkBuddy](https://github.com/Kasbuky-sudo/FnDepot/tree/main/WorkBuddy) | 5.6.2.4 | x86 + arm64 | 28471 | 腾讯 WorkBuddy 的 fnOS 原生版（非 Docker）：Agent 对话、文件 / 终端操作、办公文档、专家技能与 MCP/Skills；登录态和工作区保存在 NAS；依赖应用中心 Node.js v22；同时支持 x86_64 与 arm64（两个独立包）；5.6.2.4 修复启动脚本进程存活误判，5.6.2.3 修复 sheetagent MCP 与沙盒引擎 |
 
+
+## 致谢
+
+- 感谢酷安 **@城北徐公Doreen** 反馈并定位 WorkBuddy `cmd/main` 的进程存活判断 bug（5.6.2.4）。
 
 ## 免责声明
 
