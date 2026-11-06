@@ -380,6 +380,24 @@
       "is_docker": false,
       "service_port": "28471",
       "releases": {
+        "5.6.2.4": {
+          "changelog": "修复启动脚本进程存活误判：cmd/main 的 pid_alive 原来用 shell case glob 匹配 ERE（含 ?、|、()、[.]），永远匹配不上，导致启动后先打印 process exited before listening，应用中心随后把仍在运行的服务收掉；改用 grep -Eq 正则后启动正常。感谢酷安 @城北徐公Doreen 反馈并定位。保留 5.6.2.3 的 sheetagent MCP / sandbox-center 修复与 5.6.2.2 的设备在线、发送修复。应用内核仍为 WorkBuddy 5.6.2；x86_64 与 arm64 双包。",
+          "updated_at": "2026-11-06T08:56:32+08:00",
+          "packages": {
+            "x86": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/WorkBuddy-v5.6.2.4/workbuddy-5.6.2.4-x86.fpk",
+              "sha256": "a049049f194a6a40290fa1ca9987e306bdbed7dd85449e5b7fd8f577e0b34103",
+              "size": 257172200,
+              "updated_at": "2026-11-06T08:56:32+08:00"
+            },
+            "arm": {
+              "download_url": "https://github.com/Kasbuky-sudo/FnDepot/releases/download/WorkBuddy-v5.6.2.4/workbuddy-5.6.2.4-arm64.fpk",
+              "sha256": "2c15037f1bcb9786974419252a9f363498394cb224dcd17a2b1b74d9bb47a92d",
+              "size": 252656058,
+              "updated_at": "2026-11-06T08:56:32+08:00"
+            }
+          }
+        },
         "5.6.2.3": {
           "changelog": "修复 MCP / sheetagent 未连接：NAS 版没有 Electron 主进程，daemon 之前以 connect-only 等待永远不会被拉起的 sandbox-center。本版让 daemon 自行拉起 sandbox-center（spawn-if-missing）、补齐 executablePath，并统一 daemon 与 sandbox-cli 的 socket 地址；editor_sdk 沙盒恢复，connector-proxy / agent-mail / genie-baas / weixinpay / sheetagent 全部 connected。修复 restart 停不掉 daemon（按真实路径匹配并清理 editor_sdk / sandbox-center 孤儿进程）；启动时 chown 数据目录，自动修复 security/<uid> 归属导致的建目录失败。应用内核仍为 WorkBuddy 5.6.2；x86_64 与 arm64 双包。",
           "updated_at": "2026-10-22T16:46:42+08:00",
